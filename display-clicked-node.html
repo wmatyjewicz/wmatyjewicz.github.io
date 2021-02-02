@@ -1,0 +1,17 @@
+<html>
+  <body>
+    <iframe src="https://wojtek.shapespark.com/example-room-to-parent#autoplay"
+            style="width: 50vw; height: 50vh;">
+    </iframe>
+    <div id="clicked-node-info" style="font-size: 20px;">
+    </div>
+  </body>
+  <script>
+    var clickedNodeInfo = document.getElementById('clicked-node-info');
+    window.addEventListener('message', function(event) {
+      if (event.origin === 'https://wojtek.shapespark.com') {
+        clickedNodeInfo.innerHTML = event.data + ' clicked';
+      }
+    });
+  </script>
+</html>
